@@ -1,0 +1,7 @@
+{
+  "name": "presentation-and-now-for-something-completely-different",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}
