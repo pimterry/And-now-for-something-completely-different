@@ -7,65 +7,176 @@ html
 
     link(rel='stylesheet', type='text/css', href='build/build.css')
 
+    link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Titillium+Web:700")
   body
 
     article
 
       section
-        h1 And now for something completely different
+        h1.title
+          | And &nbsp;now &nbsp;for something completely different
 
       section
-        h2 Keyboard Interaction
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-keys">bespoke-keys</a>
-
-      section
-        h2 Touch Interaction
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-touch">bespoke-touch</a>
-
-      section
-        h2 Responsive Slides
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
-
-      section
-        h2 Bullet List
-        h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
-        ul
-          li Bullet 1
-          li Bullet 2
-          li Bullet 3
-
-      section
-        h2 Syntax Highlighting
-        h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
+        h2 INTERCAL
         pre
-          code.language-javascript.
-            bespoke.from('article', [
-              classes(),
-              keys(),
-              touch(),
-              bullets('li, .bullet')
-            ]);
+          code.language-clike.
+            $ ./myIntercalProgram
+            ONE
+            TWO
+            THREE
 
-      section(data-bespoke-hash='named-route')
-        h2 Named Route
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-        p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
-
-      section.emphatic-text(data-bespoke-backdrop='emphatic')
-        h2 Emphatic Slide!
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
+            CXXIII
+        aside
+          ul
+            li We'll start with intercal
+            li Intercal is a language that accepts input and output only numerically
+            li Input in the form of spelled words, in English, Sanscrit or Latin
+            li Output in what it calls 'butchered roman numerals'
 
       section
-        h2.bullet Just the beginning...
-        br
-        ul
-          li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
-          li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-          li Edit JavaScript in <em>'src/scripts/main.js'</em>
-        br
-        ul
-          li
-            strong Enjoy! :)
-            a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+        h2 INTERCAL
+        pre
+          code.language-clike.
+            DO ,1 <- #13
+            PLEASE DO ,1 SUB #1 <- #238
+            DO ,1 SUB #2 <- #108
+            DO ,1 SUB #3 <- #112
+            DO ,1 SUB #4 <- #0
+            DO ,1 SUB #5 <- #64
+            DO ,1 SUB #6 <- #194
+            DO ,1 SUB #7 <- #48
+            PLEASE DO ,1 SUB #8 <- #22
+            DO ,1 SUB #9 <- #248
+            DO ,1 SUB #10 <- #168
+            DO ,1 SUB #11 <- #24
+            DO ,1 SUB #12 <- #16
+            DO ,1 SUB #13 <- #162
+            PLEASE READ OUT ,1
+            PLEASE GIVE UP
+
+      section
+        h2 Program flow
+
+      section
+        h2 Befunge
+        pre
+          code.language-clike.
+            > 25*"dlroW olleH":v
+
+                         v : , _ @
+
+                         &gt;     ^
+        aside
+
+      section
+        h2 Befunge
+        img(src='images/befunge.png',style="width:240px; margin: 0.34em 0")
+
+      section
+        h2 Piet
+        img(src='images/piet-helloworld.jpg').wide
+
+      section
+        h2 NoFlo
+        img(src='images/noflo.jpg').wide
+
+      section
+        h1 Types
+
+      section
+        h2 Rexx
+        pre
+          code.language-clike.
+            a='Result'
+            b='3'
+            c='7'
+            d=a":" b*c
+            say d /* prints "Result:21" */
+
+      section
+        h2 Idris
+        pre
+          code.language-clike.
+            concat : Array n t -> Array m t -> Array (n + m) t
+
+        h5 C# equivalent:
+        pre
+          code.language-clike.
+            Array&lt;N + M, T&gt; Concat(Array&lt;N, T&gt; xs, Array&lt;M, T&gt; ys) {
+                ...
+            }
+        aside
+          ul
+            li Idris is a strongly staticly typed functional language
+            li This top part here is Idris; we're defining just the type of a concat function
+            li Concatenates two arrays together and returns the result
+            li Notably n and m here, as part of the type, are integers, while t is the type of the elements of the array
+            li So an array of one apple concatenated with an array of two apples gives an array of three apples.
+            li These are types containing integers; not like a list of integers, but a list of one.
+            li All of a sudden you can check contraints in your types you could never check in languages like C# or Java
+
+      section
+        h2 Eiffel
+        pre
+          code.language-markup.
+            withdraw_from_bank_account(amount: INTEGER) is
+                require
+                    amount >= 0
+                    balance - amount >= 0
+
+                do
+                    recordTransaction(-amount)
+
+                ensure
+                    balance = old balance - amount
+
+      section
+        h1 Culture
+
+      section
+        h2 Perl
+        h3 There's more than one way to do it
+
+      section
+        h2 Perl
+        h3
+          | There's more than one way to do it
+          br
+          strong.highlight but sometimes consistency is not a bad thing either
+
+      section
+        h2 Python
+        h3 There should be one obvious way to do it
+
+      section
+        h2 Python
+        h3 Explicit is better than implicit
+
+      section
+        h2 Ruby
+        h3 Easy is better than simple
+
+      section
+        h2 Homespring
+        pre
+          code.language-clike.
+            Universe of bear hatchery says Hello. World!.
+             It   powers      the marshy things
+            the power of the snowmelt overrides.
+        h6 "Because programming isn’t like a river, but it damn well ought to be."
+
+      section
+        h1.title Thank you
+        aside
+          ul
+            li Crazy languages are not always a good idea
+            li Different languages can expressive different concepts
+            li Visual languages are real thing
+            li There should probably not be more than one (obvious) way to do it 
+            li Language culture changes how you code more than you think
+            li All these decisions are tradeoffs
+            li You don't need types to be serious
+            li Static/dynamic typing is somewhat orthogonal to language safety
+        
 
     script(src='build/build.js')
